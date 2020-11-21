@@ -60,6 +60,23 @@ h1{
     background-size: cover;
 }
 
-@media only screen and (max-width:400px){
-    
+@media only screen and (max-width:450px){
+    #pauseModal{
+        width: 90vw;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-54%);
+    }
+
+    .panel{
+        width: 98vw;
+        
+    }
+    .card-body{
+        height: 300px;
+        
+    }
+    #comPanel{
+        margin-bottom: 10px;
+    }
 }
