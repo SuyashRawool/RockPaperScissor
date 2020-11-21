@@ -104,4 +104,8 @@ h1{
     #pause-btn{
         margin-top: 10px;
     }
+    body{
+        background-image: url(./src/IMG/BG-1.jpg);
+        background-size: cover;
+    }
 }
