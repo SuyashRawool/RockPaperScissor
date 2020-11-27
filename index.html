@@ -31,30 +31,7 @@
                             data-target="#staticBackdrop">
                             Pause
                         </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog" >
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="staticBackdropLabel">
-                                            Game Pause
-                                        </h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <button type="button" class="btn btn-primary my-2"
-                                            data-dismiss="modal">Resume</button>
-                                        <button type="button" class="btn btn-danger my-2" id="reset">Reset</button>
-                                        <button type="button" class="btn btn-success my-2">High Score</button>
 
-                                    </div>
-                                    <div class="modal-footer"></div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -72,20 +49,21 @@
             </div>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="GameOver" role="dialog">
-            <div class="modal-dialog" >
+        <div class="modal fade" id="GameOver" role="dialog" data-backdrop="static" data-keyboard="false" tabindex="-1">
+            <div class="modal-dialog">
 
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
-                        
+
                         <h4 class="modal-title text-danger">Game Over</h4>
                     </div>
                     <div class="modal-body">
-                        <button type="button" class="btn btn-danger my-2" id="reset2" data-dismiss="modal">Reset</button>
+                        <button type="button" class="btn btn-danger my-2" id="reset2"
+                            data-dismiss="modal">Reset</button>
                     </div>
                     <div class="modal-footer">
-                       
+
                     </div>
                 </div>
 
@@ -93,6 +71,54 @@
         </div>
     </div>
 
+    <!-- Modal Pause -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">
+                        Game Pause
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-primary my-2" data-dismiss="modal">Resume</button>
+                    <button type="button" class="btn btn-danger my-2" id="reset" data-dismiss="modal">Reset</button>
+                    <button type="button" class="btn btn-success my-2" id="highScore" data-toggle="modal"
+                        data-target="#HS" data-dismiss="modal">High
+                        Score</button>
+
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal hign Score -->
+    <div class="modal fade" id="HS" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">High Score</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul id="dispHS">
+                        <!--High Score List-->
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

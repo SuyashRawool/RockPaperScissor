@@ -31,5 +31,8 @@ idSelec('reset').addEventListener('click',()=>{
 idSelec('reset2').addEventListener('click',()=>{
     game.reset(); 
 });
-
+idSelec('highScore').addEventListener('click',()=>{
+    game.highScore();
+    console.log(localStorage.getItem('scores'));
+});
 //Event handlers

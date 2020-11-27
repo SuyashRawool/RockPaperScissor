@@ -67,6 +67,12 @@ h1{
         left: 50%;
         transform: translateX(-50%);
     }
+    #HS{
+        width: 90vw;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     #GameOver{
         width: 90vw;
         position: absolute;
@@ -107,5 +113,14 @@ h1{
     body{
         background-image: url(./src/IMG/BG-1.jpg);
         background-size: cover;
+    }
+    .row{
+        width: 100vw;
+    }
+    .panel{
+        width: 100vw;
+    }
+    .card{
+        width: 100vw;
     }
 }

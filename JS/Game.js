@@ -28,14 +28,39 @@ export default class Game{
             //do nothing
         }else{
             this.keepRunning=false;
+            $('.modal-title').html('Game Over: '+this.score);
             $("#GameOver").modal();
         }
     }
 
+    displayHighScore(){
+        let scores=JSON.parse(localStorage.getItem('scores'));
+        $('#dispHS').html(`<li>${scores[0]}</li>
+        <li>${scores[1]}</li>
+        <li>${scores[2]}</li>
+        <li>${scores[3]}</li>
+        <li>${scores[4]}</li>`);
+    }
+
+    highScore(){
+        let scores1=[];
+        let scores=JSON.parse(localStorage.getItem('scores'));
+        if(scores==null){
+            scores1.push(this.score);
+            localStorage.setItem('scores',JSON.stringify(scores1));
+        }else{
+            scores.push(this.score);
+            scores.sort((a,b)=>{return b-a});
+            while(scores.length>5)
+                scores.pop();
+
+            localStorage.setItem('scores',JSON.stringify(scores));
+        }
+        this.displayHighScore();
+    }
     check(){
         if(!this.keepRunning){
-            console.log('game Over:'+this.score);
-                
+            this.highScore();       
         }
             
         else{
@@ -73,9 +98,9 @@ export default class Game{
         this.score=0;
         this.keepRunning=true;
         idSelec('score').innerHTML=`0`;
-        
     }
 
+    
 
     mainFunc(userVal){
         this.randomValue();
